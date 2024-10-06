@@ -1,3 +1,7 @@
+# This is a further change from Wenjun Liu & Jiageng Liu in 0:16 10/6/2024
+
+# This is a change from Wenjun Liu & Jiageng Liu in 0:13 10/6/2024
+
 # Basic Statistics
 
 Basic Statistics is a Java-based implementation for computing statistics on a set of numbers.
