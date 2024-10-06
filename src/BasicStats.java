@@ -3,6 +3,9 @@ import java.util.*;
 import java.util.*;
 import javax.swing.*;
 
+import Views.MaxView;
+import Views.MinMaxCalculation;
+
 import java.awt.*;
 import java.awt.event.*;
 
@@ -26,6 +29,8 @@ public class BasicStats {
     //Initialize views
     CountView countView = new CountView();
     MeanView meanView = new MeanView();
+    MaxView maxView = new MaxView();
+    MinView minView = new MinView();
     MedianView medianView = new MedianView();
     ModeView modeView = new ModeView();
     NumbersView numbersView = new NumbersView();
@@ -37,6 +42,8 @@ public class BasicStats {
     statsViews.add(countView);
     statsViews.add(medianView);
     statsViews.add(meanView);
+    statsViews.add(maxView);
+    statsViews.add(minView);
     statsViews.add(modeView);
 
     /***** REGISTER MVC BLOCK *****/
@@ -96,6 +103,14 @@ public class BasicStats {
     /**
      * Compute the mean of an array of numbers.
      */
+    public static double max(double... numbers) {
+      return MinMaxCalculation.max(numbers);
+    }
+
+    public static double min(double ... numbers) {
+      return MinMaxCalculation.min(numbers);
+    }
+
     public static double mean(double ... numbers) {
         double sum = 0;
         for (double num : numbers) {
